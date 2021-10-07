@@ -30,7 +30,7 @@
         </form>
         <br>
 
-        <!-- post avoids url encoded parameters -->
+
         <form action="./jspexample2.jsp" method="post">
             <!-- here we are pre filling the value with the name variable -->
             <p>user name <input type="text" name="userName" value="<%=name %>"></p>
