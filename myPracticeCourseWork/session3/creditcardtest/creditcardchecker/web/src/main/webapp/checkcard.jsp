@@ -10,8 +10,11 @@
 
 <%
     String creditcardno = request.getParameter("creditcardno");
-
+    
     CardValidationResult result = RegexCardValidator.isValid(creditcardno);
+
+    // TODO CREATE LOGIC TO CHECK A CARD HERE
+    // TIP - LOOK AT THE CODE IN TestRegexCardValidator.java
 %>
 <!DOCTYPE html>
 <html>
@@ -26,7 +29,7 @@
             <input type="hidden" name="action" value="removeUser">
             <button type="submit" >Check Card</button>
         </form>
-
+        
         <% if (result.isValid()) {%>
         <p>"<%= result.getCardNo()%>" is a valid card number issued by  <%= result.getCardType()%> </p>
         <%
@@ -36,6 +39,8 @@
         <%
             }
         %>
+   
+        TODO CREATE A PAGE WHICH CHECKS CARD HERE
 
     </body>
 </html>
